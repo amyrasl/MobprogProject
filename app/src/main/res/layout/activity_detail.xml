@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ordermore"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:context=".DetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/detailimage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/food1" />
+
+            <TextView
+                android:id="@+id/detailname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Name"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/detailprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="price"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnsubs"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:onClick="subs"
+                    android:src="@drawable/remove" />
+
+                <TextView
+                    android:id="@+id/theqty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/btnadd"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="adds"
+                    android:src="@drawable/add" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/addbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetTop="30dp"
+            android:text="Add" />
+
+        <Button
+            android:id="@+id/ordermorebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order More" />
+    </LinearLayout>
+</LinearLayout>
